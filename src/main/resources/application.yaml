@@ -1,0 +1,11 @@
+db: 
+  source: jdbc 
+  connection: 
+    url: jdbc:postgresql://127.0.0.1:5432/distribuida 
+    username: postgres 
+    password: admin 
+  statements:
+    select-all-persona: "SELECT * FROM usuario"
+    select-by-id: "SELECT * FROM usuario WHERE id = ?"
+    insert-persona: "INSERT INTO usuario (nombre, direccion, email) VALUES(?, ?, ?)"
+    update: "UPDATE usuario SET nombre = ?, direccion = ? , email = ? WHERE id = ?;"
